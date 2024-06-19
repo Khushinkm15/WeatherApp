@@ -1,0 +1,211 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Merriweather Sans',sans-serif ;
+}
+:root{
+    --colorDark1 : #112D4E;
+    --colorDark2 : #3F72AF;
+    --colorLight1 : #D8E2EF;
+    --colorLight2 : #F9F7F7;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(168deg, #112d4e 0%, #3f72af 100%);
+}
+.topHeading{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.tabContainer{
+    width: 100%;
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top:64px;
+}
+.tab{
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+.weatherContainer{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+margin-block: 64px;
+}
+.button-location{
+    all: unset;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+margin-bottom: 32px;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 28px;
+    font-weight:600;
+}
+.grant-location-container p:last-of-type{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 13px;
+    margin-bottom: 25px;
+    letter-spacing: 0.75px;
+}
+.loadingContainer{
+    display: none;
+}
+.loadingContainer.active{
+    display: flex;
+}
+.loadingContainer p{
+    text-transform: uppercase;
+}
+.yourWeather{
+    display: none;
+}
+.yourWeather.active{
+    display: flex;
+}
+.yourWeather p{
+    font-size: 24px;
+    font-weight: 200;
+}
+.yourWeather img{
+    width: 90px;
+    height: 90px;  
+}
+.yourWeather p[data-temperature]{
+font-size: 44px;
+font-weight: 700;
+color: white;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 7px;
+    margin-bottom: 16px;
+}
+.name p{
+    font-size: 32px;
+}
+.name img{
+    width: 35px;
+    height: 30px;
+}
+.parameter{
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+justify-content: center;
+align-items: center;
+margin-top: 32px;
+}
+@media screen and (max-width:500px) {
+    .parameter{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .wrapper{
+        height: 1100px;
+        background-image: linear-gradient(168deg, #112d4e 0%, #3f72af 100%);
+    }
+}
+.card{
+    max-width: none;
+width: 180px;
+background-color: rgba(219, 226, 239, 0.5);
+border-radius: 5px;
+padding: 16px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+height: 160px;
+align-items: center;
+justify-content: center;
+}
+.card img{
+    width: 50px;
+    height: 50px;
+}
+.card p:first-of-type{
+font-size: 19px ;
+font-weight: 600;
+text-transform: uppercase;
+display: inline;
+}
+.card p:last-of-type{
+    font-size: 16px;
+    font-weight: 200;
+}
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 0 10px;
+    margin-bottom: 48px;
+    justify-content: center;
+    align-items: center;
+}
+.form-container.active{
+    display: flex;
+    
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-container button{
+    all: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--colorDark2);
+}
